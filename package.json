@@ -1,5 +1,6 @@
 {
   "name": "scandiweb-test",
+  "homepage": "https://devcollinss.github.io/scandiwebtest/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

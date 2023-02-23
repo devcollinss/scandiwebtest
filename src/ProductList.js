@@ -11,7 +11,7 @@ const ProductList = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost/h/product.php')
+        axios.get('https://vssdf.000webhostapp.com/product.php')
         .then(response => {
             setProduct(response.data);
             console.log(response.data)
@@ -42,7 +42,7 @@ const ProductList = () => {
     
 
       const massDelete = () => {
-        axios.post('http://localhost/h/deleteProduct.php', { ids: checkedIds })
+        axios.post('https://vssdf.000webhostapp.com/deleteProduct.php', { ids: checkedIds })
           .then(response => {
             console.log(response);
           })

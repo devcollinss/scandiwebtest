@@ -59,7 +59,7 @@ const AddProduct = () => {
   
     // Send form data as JSON to PHP script
 
-axios.post('http://localhost/h/oop.php', product, {
+axios.post('https://vssdf.000webhostapp.com/addproduct.php', product, {
     headers: {
         'Content-Type': 'application/json'
     }
