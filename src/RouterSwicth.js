@@ -10,7 +10,7 @@ const RouterSwitch = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/scandiwebtest/" element={<ProductList />} />
-                <Route path="/addproduct" element={<AddProduct />} />
+                <Route path="/scandiwebtest/addproduct" element={<AddProduct />} />
             </Routes>
         </BrowserRouter>
     )

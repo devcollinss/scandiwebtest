@@ -19,7 +19,7 @@ const ProductList = () => {
         .catch(error => {
             console.log(error)
         })
-    }, [])
+    }, [product])
 
     // const handleCheck = (e) => {
     //     // setCheck([...check, {'id': e.target.value}])
@@ -60,7 +60,7 @@ const ProductList = () => {
             <div><h1>Product List</h1></div>
             <div className='btn'>
                 {/* <Link to='/addproduct'>Add <img src={AddIcon} /></Link> */}
-                <button onClick={()=> navigate("/addproduct")}>Add <img src={AddIcon} /></button>
+                <button onClick={()=> navigate("/scandiwebtest/addproduct")}>Add <img src={AddIcon} /></button>
                 <button onClick={massDelete}>Mass Delete <img src={Deletecon} /></button>
             </div>
         </nav>
