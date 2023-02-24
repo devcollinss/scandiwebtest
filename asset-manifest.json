@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/scandiwebtest/static/css/main.1bb226c8.css",
-    "main.js": "/scandiwebtest/static/js/main.0cd8f0f1.js",
+    "main.js": "/scandiwebtest/static/js/main.b0cfe8e8.js",
     "static/media/add.svg": "/scandiwebtest/static/media/add.eee36966b5742e200253b606927f01f3.svg",
     "index.html": "/scandiwebtest/index.html",
     "static/media/bx-trash.svg": "/scandiwebtest/static/media/bx-trash.ae1d7392fd085203d310da4ee25001a4.svg",
     "main.1bb226c8.css.map": "/scandiwebtest/static/css/main.1bb226c8.css.map",
-    "main.0cd8f0f1.js.map": "/scandiwebtest/static/js/main.0cd8f0f1.js.map"
+    "main.b0cfe8e8.js.map": "/scandiwebtest/static/js/main.b0cfe8e8.js.map"
   },
   "entrypoints": [
     "static/css/main.1bb226c8.css",
-    "static/js/main.0cd8f0f1.js"
+    "static/js/main.b0cfe8e8.js"
   ]
 }
