@@ -59,11 +59,6 @@ const ProductList = () => {
 
       };
 
-      const checker = document.querySelectorAll('.delete-checkbox');
-      for (let i = 0; i < checker.length; i++) {
-        checker[i].addEventListener('click', handleCheck)
-        
-      }
       
 
 
@@ -79,7 +74,7 @@ const ProductList = () => {
         <div className='productLists'>
             {product.map((prod) => (
                 <div className='product' key={prod.id} >
-                    <input type='checkbox' className='delete-checkbox' value={prod.id} />
+                    <input type='checkbox' className='delete-checkbox' value={prod.id} onClick={handleCheck} />
                     <h2>{prod.sku}</h2>
                     <h2>{prod.name}</h2>
                     <h2>{prod.price}</h2>
