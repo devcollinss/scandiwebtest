@@ -79,7 +79,7 @@ axios.post('https://swyftrade.com/addproduct.php', product, {
         length: "",
     });
     setErrorG('')
-    navigate('/scandiwebtest')
+    navigate('/')
 })
 .catch(error => {
   setErrorG('Sku Already Exist')
@@ -97,7 +97,7 @@ axios.post('https://swyftrade.com/addproduct.php', product, {
             <div><h1>Add Product</h1></div>
             <div className='btn'>
                 <button onClick={handleSubmit}>Save </button>
-                <button onClick={()=> navigate("/scandiwebtest")}>Cancel</button>
+                <button onClick={()=> navigate("/")}>Cancel</button>
             </div>
         </nav>
     <form onSubmit={handleSubmit} id="product_form">

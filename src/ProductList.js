@@ -72,8 +72,8 @@ const ProductList = () => {
         <nav>
             <div><h1>Product List</h1></div>
             <div className='btn'>
-                <button onClick={()=> navigate("/scandiwebtest/addproduct")}>ADD</button>
-                <button>MASS DELETE</button>
+                <button onClick={()=> navigate("/addproduct")}>ADD</button>
+                <button onClick={massDelete}>MASS DELETE</button>
             </div>
         </nav>
         <div className='productLists'>
