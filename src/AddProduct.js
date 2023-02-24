@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -18,7 +18,6 @@ const AddProduct = () => {
   });
   const [error, setError] = useState('')
   const [errorG, setErrorG] = useState('')
-  const [skuExist, setSkuExist] = useState('')
 
   const handleChange = (e) => {
     const { id, value } = e.target;

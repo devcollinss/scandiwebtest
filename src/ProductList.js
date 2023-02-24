@@ -1,33 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import AddIcon from './add.svg';
-import Deletecon from './bx-trash.svg';
 import axios from 'axios';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ProductList = () => {
-    const [check, setCheck] = useState([{}]);
     const [product, setProduct] = useState([]);
     const [checkedIds, setCheckedIds] = useState([]);
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('https://swyftrade.com/product.php')
+        axios.get('https://scandiwebtest.moe-enugustate.com/product.php')
         .then(response => {
             setProduct(response.data);
-            console.log(response.data)
         })
         .catch(error => {
             console.log(error)
         })
     }, [product])
 
-    // const handleCheck = (e) => {
-    //     // setCheck([...check, {'id': e.target.value}])
-    //     setTimeout(() => {
-            
-    //     }, 2000)
-    // }
-    const deleteCheck = document.querySelectorAll('.delete-checkbox');
 
     const handleCheck = (e) => {
         const id = parseInt(e.target.value);
@@ -38,14 +27,13 @@ const ProductList = () => {
         } else {
           setCheckedIds(prevCheckedIds => prevCheckedIds.filter(checkedId => checkedId !== id));
         }
-        console.log(checkedIds)
       };
 
       
     
 
       const massDelete = () => {
-        const deleteUrl = 'https://swyftrade.com/delete.php';
+        const deleteUrl = 'https://scandiwebtest.moe-enugustate.com/delete.php';
 
         axios.post(deleteUrl, { ids: checkedIds }, {
           mode: 'cors'
