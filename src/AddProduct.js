@@ -9,7 +9,7 @@ const AddProduct = () => {
     sku: "",
     name: "",
     price: "",
-    type: "",
+    productType: "",
     size: "",
     weight: "",
     height: "",
@@ -32,25 +32,25 @@ const AddProduct = () => {
     const { sku, name, price, type, ...attributes } = product;
     
     // Check if required fields are empty
-    if (product.sku == '' || product.name == '' || product.price == '' || product.type == '') {
+    if (product.sku == '' || product.name == '' || product.price == '' || product.productType == '') {
       setErrorG("Please, provide All info");
       return;
     } else {
       setErrorG('')
     }
-    if (product.type === "dvd" && !product.size) {
+    if (product.productType === "dvd" && !product.size) {
       setError("Please, provide size");
       return;
     } else {
       setError('');
     }
-    if (product.type === "book" && !product.weight) {
+    if (product.productType === "book" && !product.weight) {
       setError("Please, provide weight");
       return;
     } else {
       setError('');
     }
-    if (product.type === "furniture" && (!product.height || !product.width || !product.length)) {
+    if (product.productType === "furniture" && (!product.height || !product.width || !product.length)) {
       setError("Please, provide height, width, and length");
       return;
     } else {
@@ -59,7 +59,7 @@ const AddProduct = () => {
   
     // Send form data as JSON to PHP script
 
-axios.post('https://vssdf.000webhostapp.com/addproduct.php', product, {
+axios.post('https://swyftrade.com/addproduct.php', product, {
     headers: {
         'Content-Type': 'application/json'
     }
@@ -71,7 +71,7 @@ axios.post('https://vssdf.000webhostapp.com/addproduct.php', product, {
         sku: "",
         name: "",
         price: "",
-        type: "",
+        productType: "",
         size: "",
         weight: "",
         height: "",
@@ -79,7 +79,7 @@ axios.post('https://vssdf.000webhostapp.com/addproduct.php', product, {
         length: "",
     });
     setErrorG('')
-    navigate('/')
+    navigate('/scandiwebtest')
 })
 .catch(error => {
   setErrorG('Sku Already Exist')
@@ -87,6 +87,7 @@ axios.post('https://vssdf.000webhostapp.com/addproduct.php', product, {
 });
 
   };
+
   
 
 
@@ -96,7 +97,7 @@ axios.post('https://vssdf.000webhostapp.com/addproduct.php', product, {
             <div><h1>Add Product</h1></div>
             <div className='btn'>
                 <button onClick={handleSubmit}>Save </button>
-                <button onClick={()=> navigate("/")}>Cancel</button>
+                <button onClick={()=> navigate("/scandiwebtest")}>Cancel</button>
             </div>
         </nav>
     <form onSubmit={handleSubmit} id="product_form">
@@ -133,7 +134,7 @@ axios.post('https://vssdf.000webhostapp.com/addproduct.php', product, {
       </label>
       <label>
         Type Switcher:
-        <select id="type" value={product.type} onChange={handleChange}>
+        <select id="productType" value={product.type} onChange={handleChange}>
           <option value="">Type Switcher</option>
           <option value="dvd">DVD</option>
           <option value="book">Book</option>

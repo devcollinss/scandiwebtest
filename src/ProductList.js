@@ -11,7 +11,7 @@ const ProductList = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('https://vssdf.000webhostapp.com/product.php')
+        axios.get('https://swyftrade.com/product.php')
         .then(response => {
             setProduct(response.data);
             console.log(response.data)
@@ -38,19 +38,32 @@ const ProductList = () => {
         } else {
           setCheckedIds(prevCheckedIds => prevCheckedIds.filter(checkedId => checkedId !== id));
         }
+        console.log(checkedIds)
       };
+
+      
     
 
       const massDelete = () => {
-        axios.post('https://vssdf.000webhostapp.com/deleteProduct.php', { ids: checkedIds })
-          .then(response => {
-            console.log(response);
-          })
-          .catch(error => {
-            console.log(error);
-          });
+        const deleteUrl = 'https://swyftrade.com/delete.php';
+
+        axios.post(deleteUrl, { ids: checkedIds }, {
+          mode: 'cors'
+        })
+        .then(response => {
+          console.log(response);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+
       };
 
+      const checker = document.querySelectorAll('.delete-checkbox');
+      for (let i = 0; i < checker.length; i++) {
+        checker[i].addEventListener('click', handleCheck)
+        
+      }
       
 
 
@@ -59,15 +72,14 @@ const ProductList = () => {
         <nav>
             <div><h1>Product List</h1></div>
             <div className='btn'>
-                {/* <Link to='/addproduct'>Add <img src={AddIcon} /></Link> */}
-                <button onClick={()=> navigate("/scandiwebtest/addproduct")}>Add <img src={AddIcon} /></button>
-                <button onClick={massDelete}>Mass Delete <img src={Deletecon} /></button>
+                <button onClick={()=> navigate("/scandiwebtest/addproduct")}>ADD</button>
+                <button>MASS DELETE</button>
             </div>
         </nav>
         <div className='productLists'>
             {product.map((prod) => (
                 <div className='product' key={prod.id} >
-                    <input type='checkbox' className='delete-checkbox' value={prod.id} onClick={handleCheck} />
+                    <input type='checkbox' className='delete-checkbox' value={prod.id} />
                     <h2>{prod.sku}</h2>
                     <h2>{prod.name}</h2>
                     <h2>{prod.price}</h2>
