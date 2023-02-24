@@ -1,15 +1,13 @@
 {
   "files": {
     "main.css": "/scandiwebtest/static/css/main.3cf43fc4.css",
-    "main.js": "/scandiwebtest/static/js/main.eecac54f.js",
-    "static/media/add.svg": "/scandiwebtest/static/media/add.eee36966b5742e200253b606927f01f3.svg",
+    "main.js": "/scandiwebtest/static/js/main.3608365f.js",
     "index.html": "/scandiwebtest/index.html",
-    "static/media/bx-trash.svg": "/scandiwebtest/static/media/bx-trash.ae1d7392fd085203d310da4ee25001a4.svg",
     "main.3cf43fc4.css.map": "/scandiwebtest/static/css/main.3cf43fc4.css.map",
-    "main.eecac54f.js.map": "/scandiwebtest/static/js/main.eecac54f.js.map"
+    "main.3608365f.js.map": "/scandiwebtest/static/js/main.3608365f.js.map"
   },
   "entrypoints": [
     "static/css/main.3cf43fc4.css",
-    "static/js/main.eecac54f.js"
+    "static/js/main.3608365f.js"
   ]
 }

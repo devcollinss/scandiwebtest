@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="18.333" viewBox="0 0 16.5 18.333">
-  <g id="bx-trash" transform="translate(-6 -4)">
-    <path id="Path_3" data-name="Path 3" d="M7.833,20.5a1.833,1.833,0,0,0,1.833,1.833h9.167A1.833,1.833,0,0,0,20.667,20.5V9.5H22.5V7.667H18.833V5.833A1.833,1.833,0,0,0,17,4H11.5A1.833,1.833,0,0,0,9.667,5.833V7.667H6V9.5H7.833ZM11.5,5.833H17V7.667H11.5ZM10.583,9.5h8.25v11H9.667V9.5Z" fill="#f50000"/>
-    <path id="Path_4" data-name="Path 4" d="M18,20h1.833v7.333H18Zm3.667,0H23.5v7.333H21.667Z" transform="translate(-6.5 -8.667)" fill="#f50000"/>
-  </g>
-</svg>
