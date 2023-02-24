@@ -142,7 +142,7 @@ axios.post('https://swyftrade.com/addproduct.php', product, {
         </select>
       </label>
       <p className="error">{error}</p>
-      {product.type === "dvd" && (
+      {product.productType === "dvd" && (
         <label>
           Size (MB):
           <input
@@ -154,7 +154,7 @@ axios.post('https://swyftrade.com/addproduct.php', product, {
           />
         </label>
       )}
-      {product.type === "book" && (
+      {product.productType === "book" && (
         <label>
           Weight (Kg):
           <input
@@ -166,7 +166,7 @@ axios.post('https://swyftrade.com/addproduct.php', product, {
           />
         </label>
       )}
-      {product.type === "furniture" && (
+      {product.productType === "furniture" && (
         <div>
           <label>
             Height (in):
