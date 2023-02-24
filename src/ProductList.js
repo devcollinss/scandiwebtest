@@ -83,7 +83,7 @@ const ProductList = () => {
                     <h2>{prod.sku}</h2>
                     <h2>{prod.name}</h2>
                     <h2>{prod.price}</h2>
-                    <p>{(prod.type === 'dvd') ? `Size: ${prod.size}` : ((prod.type === 'book') ? `Weight: ${prod.weight}` : (prod.type === 'furniture') ? `Dimension: ${prod.height}x${prod.width}x${prod.length}` : '') }</p>
+                    <p>{(prod.type === 'dvd') ? `Size: ${prod.size}MB` : ((prod.type === 'book') ? `Weight: ${prod.weight}KG` : (prod.type === 'furniture') ? `Dimension: ${prod.height}x${prod.width}x${prod.length}` : '') }</p>
                 </div>
 
             ))}
