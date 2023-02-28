@@ -58,7 +58,7 @@ const AddProduct = () => {
   
     // Send form data as JSON to PHP script
 
-axios.post('https://swyftrade.com/addproduct.php', product, {
+axios.post('https://scandiwebtest.moe-enugustate.com/addproduct.php', product, {
     headers: {
         'Content-Type': 'application/json'
     }
