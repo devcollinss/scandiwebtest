@@ -11,6 +11,7 @@ const ProductList = () => {
         axios.get('https://scandiwebtest.moe-enugustate.com/product.php')
         .then(response => {
             setProduct(response.data);
+            console.log(response.data);
         })
         .catch(error => {
             console.log(error)
